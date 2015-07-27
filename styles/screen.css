@@ -1,0 +1,72 @@
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 0px;
+  color: #444;
+  text-rendering: optimizeLegibility;
+  background: #fff;
+}
+.btn-lg {
+  font-size: 24px;
+}
+img.logo {
+  width: 60px;
+  height: 60px;
+}
+.header {
+background-color
+  padding: 0 30px;
+}
+a {
+  color: #2489ae;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+a.alt-btn {
+  font-size: 16px;
+  display: inline-block;
+  margin-left: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.fg-light {
+  color: #aaa;
+}
+.logo {
+  margin-right: 10px;
+}
+h1 {
+  text-transform: capitalize;
+  font-size: 50px;
+  color: #c03d35;
+  font-weight: 200;
+  margin: 20px auto 25px;
+}
+h2 {
+  color: #444;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 24px;
+  color: #2489ae;
+  font-weight: 300;
+}
+h4 {
+  font-weight: 300;
+}
+#main-input {
+  margin-top: 30px;
+}
+.help-block {
+  padding: 6px;
+  font-size: 1.5em;
+}
+.help-block a {
+  text-decoration: underline;
+}

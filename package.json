@@ -1,0 +1,27 @@
+{
+  "name": "screen-kitty",
+  "version": "0.0.0",
+  "description": "Script-controlled power source (Weaved IoT plug) to limit screen time ============",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jedwood/screen-kitty.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jedwood/screen-kitty/issues"
+  },
+  "homepage": "",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.5.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-jade": "^0.13.0",
+    "grunt-contrib-stylus": "^0.20.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

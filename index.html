@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Screen Kitty</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="description" content="Let Strict Kitty monitor your kids' screen time">
+    <meta property="og:image" content="http://limechile.com/spellerkitty/serious-kitty.jpg">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" media="screen, projection" href="styles/screen.css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" type="text/css">
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <div id="main"></div>
+    <script id="main_tpl" type="text/ractive">{{#if !timesUp}}
+      <div class="text-center"><img src="serious-kitty-headshot.jpg" width="100px" class="kitty-headshot img-circle"></div>{{/if}}
+      <h1 class="logotype text-center">Screen Kitty</h1>{{#if isLoading}}
+      <div id="loading" intro="fade">
+        <h3 class="text-center">Checking time...</h3>
+      </div>{{else}}
+      {{#if timesUp}}
+      <div class="done text-center"><img intro="fade" src="serious-kitty.jpg" width="240px">
+        <h3 class="text-center">Go outside and play.</h3>
+      </div>{{else}}
+      <h3 class="text-center">{{timeLeft}} minutes</h3>{{#if isPlaying}}
+      <h3 intro="fade" class="text-center"><a on-tap="stopPlaying" class="btn btn-lg btn-danger">Stop</a></h3>{{else}}
+      <h3 intro="fade" class="text-center"><a on-tap="startPlaying" class="btn btn-lg btn-info">Play</a></h3>{{/if}}
+      {{/if}}
+      {{/if}}
+      <div class="container">
+        <audio id="leword" src="{{wordSoundURL}}" preload="auto"></audio>
+      </div>
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="scripts/jquery-1.11.1.min.js">\x3C/script>')</script>
+    <script src="http://cdn.ractivejs.org/latest/ractive.min.js"></script>
+    <script src="scripts/ractive-plugins.js"></script>
+    <script src="https://cdn.pubnub.com/pubnub.min.js"></script>
+    <script src="scripts/bundle.js"></script>
+  </body>
+</html>
